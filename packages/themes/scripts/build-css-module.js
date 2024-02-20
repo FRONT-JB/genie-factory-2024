@@ -36,7 +36,25 @@ const generateThemeCssVariables = () => {
             .join("\n");
 
           cssString.push(`${selector} {\n${cssVariables}\n}`);
+
+          return;
         }
+
+        const selector = ":root .theme-dark";
+
+        const cssVariables = Object.entries(colorValue)
+          .map(([mainKey, mainValue]) =>
+            Object.entries(mainValue)
+              .map(([subKey, subValue]) => {
+                return `--${toCssCasting(mainKey)}-${toCssCasting(
+                  subKey
+                )}: ${subValue};`;
+              })
+              .join("\n")
+          )
+          .join("\n");
+
+        cssString.push(`${selector} {\n${cssVariables}\n}`);
       });
     }
   });
