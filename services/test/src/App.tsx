@@ -1,8 +1,7 @@
-import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { ThemeProvider } from "@emotion/react";
-import { vars } from "@genie/themes";
+import { vars, classes } from "@genie/themes";
 import styled from "@emotion/styled";
 
 function App() {
@@ -41,5 +40,6 @@ const View = () => {
 export default App;
 
 const Text = styled.p`
+  ${classes.typography.heading["4xl"]}
   color: ${vars.colors.$static.light.red[500]};
 `;
