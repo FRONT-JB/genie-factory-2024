@@ -1,0 +1,11 @@
+{
+  "name": "@genie/esbuild-config",
+  "packageManager": "yarn@3.6.3",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "esbuild": "0.16.17"
+  }
+}
