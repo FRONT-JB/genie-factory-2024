@@ -1,6 +1,6 @@
 {
   "name": "genie-factory",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "workspaces": [
     "packages/**/*",
     "services/**/*"
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "vscode": "yarn dlx @yarnpkg/sdks vscode"
   },
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.1.1",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -26,6 +26,6 @@
     "eslint-plugin-storybook": "^0.6.13",
     "nx": "^18.0.4",
     "prettier": "^3.0.3",
-    "typescript": "^5.3.3"
+    "typescript": "^5.2.2"
   }
 }
