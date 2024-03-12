@@ -15,15 +15,18 @@
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "dev": "yarn build:js --watch && yarn build:type --watch"
   },
   "devDependencies": {
     "@genie/esbuild-config": "workspace:^",
     "@genie/themes": "workspace:^",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vanilla-extract/css": "^1.14.1",
-    "@vanilla-extract/esbuild-plugin": "^2.3.5",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vanilla-extract/css": "^1.13.0",
+    "@vanilla-extract/esbuild-plugin": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {

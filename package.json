@@ -8,11 +8,14 @@
   "scripts": {
     "build": "nx build",
     "graph": "nx run-many --target=build --graph",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:all": "yarn dev:storybook & yarn dev:packages",
+    "dev:storybook": "nx storybook @genie/storybook",
+    "dev:packages": "nx run-many --target=dev --projects='@genie/react-components-*'",
     "vscode": "yarn dlx @yarnpkg/sdks vscode"
   },
   "packageManager": "yarn@4.1.1",
   "devDependencies": {
+    "@storybook/addon-docs": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
